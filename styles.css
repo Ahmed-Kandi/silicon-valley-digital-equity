@@ -6,14 +6,23 @@
 /* ── Web Font ───────────────────────────────────────────────── */
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400;1,9..40,500&display=swap');
 
+/* ── Brand Colors ───────────────────────────────────────────── */
+/*
+   SVDE Brand Palette
+   Primary:  #1a4a8f  — deep navy-blue (trust, technology, institutional)
+   Accent:   #0ea5e9  — sky blue (modern, approachable, distinct from primary)
+   Impact:   #16a34a  — green (reserved for success, impact, and positive outcomes)
+   Neutral:  white + ink
+*/
+
 /* ── Variables ─────────────────────────────────────────────── */
 :root {
-  --navy:        #0d2b5e;
-  --blue:        #1a4f8a;
-  --blue-bright: #2563eb;
-  --blue-light:  #bfdbfe;
-  --blue-pale:   #eff6ff;
-  --green:       #16a34a;
+  --navy:        #0b2347;          /* brand: darkest blue — hero/header backgrounds  */
+  --blue:        #1a4a8f;          /* brand primary — buttons, nav logo, step numbers */
+  --blue-bright: #0ea5e9;          /* brand accent — highlights, links, hover states  */
+  --blue-light:  #bae6fd;          /* accent tint border */
+  --blue-pale:   #f0f9ff;          /* accent tint background */
+  --green:       #16a34a;          /* impact green — success, stats, checkmarks */
   --green-light: #dcfce7;
   --orange:      #ea580c;
   --orange-light:#ffedd5;
@@ -188,13 +197,13 @@ p  { line-height: 1.75; color: var(--ink-light); }
   border-bottom: 1px solid var(--border);
   transition: box-shadow var(--transition);
 }
-/* Thin accent bar at top of page */
+/* Thin accent bar at top of page — brand gradient */
 .nav::before {
   content: '';
   position: absolute;
   top: 0; left: 0; right: 0;
   height: 3px;
-  background: linear-gradient(90deg, var(--navy) 0%, var(--blue-bright) 50%, var(--green) 100%);
+  background: linear-gradient(90deg, #1a4a8f 0%, #0ea5e9 60%, #16a34a 100%);
 }
 .nav.scrolled { box-shadow: var(--shadow); }
 
@@ -215,7 +224,7 @@ p  { line-height: 1.75; color: var(--ink-light); }
 
 .nav-logo-mark {
   width: 36px; height: 36px;
-  background: var(--blue-bright);
+  background: linear-gradient(135deg, #1a4a8f 0%, #0ea5e9 100%);
   border-radius: 8px;
   display: flex; align-items: center; justify-content: center;
   font-size: 0.625rem; font-weight: 900;
@@ -278,7 +287,7 @@ p  { line-height: 1.75; color: var(--ink-light); }
 /* ── Page Header (inner pages) ──────────────────────────────── */
 .page-header {
   padding-top: var(--nav-h);
-  background: linear-gradient(155deg, var(--navy) 0%, #1a4f8a 55%, #1e3a6e 100%);
+  background: linear-gradient(155deg, #0b2347 0%, #1a4a8f 55%, #113372 100%);
   color: var(--white);
   position: relative;
   overflow: hidden;
@@ -315,7 +324,7 @@ p  { line-height: 1.75; color: var(--ink-light); }
 /* ── Hero ───────────────────────────────────────────────────── */
 .hero {
   padding-top: var(--nav-h);
-  background: linear-gradient(155deg, var(--navy) 0%, #1a4f8a 55%, #1e3a6e 100%);
+  background: linear-gradient(155deg, #0b2347 0%, #1a4a8f 55%, #113372 100%);
   color: var(--white);
   position: relative;
   overflow: hidden;
@@ -547,7 +556,7 @@ p  { line-height: 1.75; color: var(--ink-light); }
 .impact-item-text span   { font-size: 0.875rem; color: var(--muted); }
 
 .impact-visual {
-  background: linear-gradient(145deg, var(--navy) 0%, #1a4f8a 100%);
+  background: linear-gradient(145deg, #0b2347 0%, #1a4a8f 100%);
   border-radius: var(--radius);
   padding: 2.75rem 2.5rem;
   color: var(--white);
@@ -583,7 +592,7 @@ p  { line-height: 1.75; color: var(--ink-light); }
 
 /* ── CTA Section ────────────────────────────────────────────── */
 .cta-section {
-  background: linear-gradient(155deg, var(--navy) 0%, #1a4f8a 100%);
+  background: linear-gradient(155deg, #0b2347 0%, #1a4a8f 100%);
   color: var(--white);
   position: relative; overflow: hidden;
 }
@@ -642,14 +651,12 @@ p  { line-height: 1.75; color: var(--ink-light); }
 .founder-photo {
   width: 96px; height: 96px;
   border-radius: 50%;
-  background: var(--blue-pale);
+  background: linear-gradient(135deg, #1a4a8f 0%, #0ea5e9 100%);
   border: 3px solid var(--blue-light);
   display: flex; align-items: center; justify-content: center;
   margin-bottom: 1.25rem;
-  color: var(--blue-bright);
-  font-size: 0.6875rem; font-weight: 700;
-  text-align: center; padding: 0.5rem;
-  line-height: 1.3;
+  flex-shrink: 0;
+  box-shadow: 0 0 0 4px var(--blue-pale), 0 4px 16px rgba(14,165,233,0.25);
 }
 .paradox-quote {
   border-left: 4px solid var(--blue-bright);
