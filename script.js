@@ -7,8 +7,7 @@
 
 (function () {
   const stored = localStorage.getItem('svde-theme');
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  const theme = stored || (prefersDark ? 'dark' : 'light');
+  const theme = stored || 'light';
   if (theme === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
   else                  document.documentElement.setAttribute('data-theme', 'light');
 })();
