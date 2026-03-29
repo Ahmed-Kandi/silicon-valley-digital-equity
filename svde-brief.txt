@@ -1,0 +1,139 @@
+SVDE Website Brief
+===================
+
+PROJECT OVERVIEW
+----------------
+Formal name: Silicon Valley Digital Equity
+Brand name: Silicon Valley Digital Equity
+Abbreviation: SVDE
+URL/code references: svde
+Type: High school student-led nonprofit
+Fiscal Sponsor: Hack Club Bank (501c3, pending approval)
+Location: San Jose / Cupertino, CA (Silicon Valley)
+
+
+MISSION
+-------
+Bridge the digital divide in Silicon Valley by refurbishing donated computers
+and distributing them free to low-income families. Despite being one of the
+wealthiest tech regions in the world, many families in our community still
+lack access to basic computing equipment.
+
+
+HOW IT WORKS (3 steps — display prominently on site)
+-----------------------------------------------------
+Step 1 - SOURCE
+  We collect retired computers from local businesses (accounting firms, law
+  offices, real estate agencies) who donate hardware they would otherwise
+  discard or pay to e-waste.
+
+Step 2 - REFURBISH
+  We wipe, repair, and install free open-source software on each machine.
+  Parts cost roughly $20-40 per build; the hardware itself is donated.
+
+Step 3 - DISTRIBUTE
+  Families referred through our partnership with Second Harvest of Silicon
+  Valley receive a fully functional computer at no cost.
+
+
+CURRENT STATUS
+--------------
+- Pre-launch; first builds planned for Summer 2026
+- First cohort goal: 5-10 computers
+- Fiscal sponsor: Hack Club Bank (pending approval)
+- Community partner: Second Harvest of Silicon Valley
+- Team: High school student from San Jose / Cupertino area
+
+
+LONG-TERM VISION
+----------------
+Build a replicable chapter model with a documented playbook that other high
+school students across the Bay Area can use to run their own SVDE chapter,
+scaling the program regionally without depending on one team.
+
+
+PAGES REQUIRED
+--------------
+1. HOME
+   - Hero section with mission statement
+   - 3-step How It Works overview
+   - Two calls to action: Donate Money / Donate Hardware
+
+2. ABOUT
+   - Who we are (high school student founder)
+   - Why we started this
+   - Our story and the Silicon Valley paradox
+
+3. HOW IT WORKS
+   - Expanded version of the 3-step model
+   - Impact framing (e.g. $20-40 per build, 1 donation = 1 family)
+
+4. GET INVOLVED
+   - Track 1: Businesses / individuals donate hardware (link to inquiry form)
+   - Track 2: Individuals donate money (link to Hack Club Bank — placeholder)
+
+5. CONTACT
+   - Simple contact form or mailto link
+
+
+FORMS REQUIRED
+--------------
+Hardware Donation Inquiry Form fields:
+  - Full name
+  - Company name
+  - Number of machines available
+  - Machine type (laptop / desktop / mixed)
+  - Contact email
+  - Phone number (optional)
+  - Message / notes (optional)
+
+
+TONE AND DESIGN
+---------------
+Overall feel: Clean, modern, professional — not a student project aesthetic
+Target audiences:
+  - Businesses considering hardware donations (need to feel trustworthy)
+  - Grant committees reviewing the org (need to feel credible)
+  - Families who may receive computers (need to feel warm and accessible)
+
+Color palette: Blue and white base, green or orange accent
+Typography: Clean sans-serif, high readability
+Layout: Whitespace-heavy, icon-driven, minimal stock photos
+Must be fully mobile responsive
+
+
+KEY MESSAGES
+------------
+- The Silicon Valley paradox: world's richest tech hub, families without computers
+- Direct traceable impact: 1 business donation = 1 family gets a computer
+- Student-led but serious: real partners, real operation, not a school project
+- All monetary donations are tax-deductible via Hack Club's 501(c)(3)
+
+
+FUNCTIONAL REQUIREMENTS
+-----------------------
+- Mobile responsive (required)
+- Donation button -> Hack Club Bank donation page (use placeholder URL for now)
+- Hardware donation inquiry form (fields listed above)
+- Fast load time, no heavy frameworks required
+- No login or user accounts needed
+- No e-commerce needed
+
+
+PLACEHOLDER CONTENT NOTES
+--------------------------
+The following will be filled in later and should use placeholders for now:
+  - Founder name and bio (About page)
+  - Founder photo
+  - Real Hack Club Bank donation URL
+  - Impact statistics (once builds begin)
+
+
+BUILD INSTRUCTIONS FOR CLAUDE CODE
+------------------------------------
+Please build a complete multi-page website using HTML, CSS, and vanilla
+JavaScript (or a lightweight framework if needed). Use the structure, tone,
+pages, and design direction described above. All placeholder content should
+be clearly marked with [PLACEHOLDER] tags so it is easy to find and replace
+later. Make the site look polished and professional — the goal is for it to
+be indistinguishable from a funded nonprofit's website.
