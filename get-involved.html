@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Get Involved — Silicon Valley Digital Equity</title>
+  <meta name="description" content="Support SVDE by donating old computers from your business or making a tax-deductible financial contribution through Hack Club Bank." />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Get Involved specific overrides */
+    .tracks { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 3rem; }
+    @media (max-width: 768px) { .tracks { grid-template-columns: 1fr; } }
+
+    .faq-item {
+      padding: 1.25rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q {
+      font-weight: 600; font-size: .9375rem; color: var(--ink);
+      margin-bottom: .5rem; display: flex; align-items: flex-start; gap: .625rem;
+    }
+    .faq-q::before {
+      content: 'Q';
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 22px; height: 22px; border-radius: 50%;
+      background: var(--blue-pale); color: var(--blue-bright);
+      font-size: .75rem; font-weight: 800;
+      flex-shrink: 0; margin-top: .05rem;
+    }
+    .faq-a { font-size: .9375rem; color: var(--ink-light); padding-left: 2rem; line-height: 1.75; }
+  </style>
+</head>
+<body>
+
+  <!-- ── Navigation ──────────────────────────────────────── -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo" aria-label="SVDE Home">
+          <div class="nav-logo-mark" aria-hidden="true">SVDE</div>
+          <div class="nav-logo-text">
+            <span class="nav-logo-abbr">SVDE</span>
+            <span class="nav-logo-full">Silicon Valley Digital Equity</span>
+          </div>
+        </a>
+        <ul class="nav-links" role="list">
+          <li><a href="index.html"        class="nav-link">Home</a></li>
+          <li><a href="about.html"        class="nav-link">About</a></li>
+          <li><a href="how-it-works.html" class="nav-link">How It Works</a></li>
+          <li><a href="get-involved.html" class="nav-link">Get Involved</a></li>
+          <li><a href="contact.html"      class="nav-link">Contact</a></li>
+        </ul>
+        <a href="#donate-money" class="btn btn-primary nav-cta">Donate Now</a>
+
+        <button class="nav-theme-toggle" aria-label="Switch to dark mode" title="Toggle dark mode">
+          <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="icon-sun"  width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </button>
+
+        <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <div class="nav-mobile" role="menu">
+        <a href="index.html"        class="nav-link" role="menuitem">Home</a>
+        <a href="about.html"        class="nav-link" role="menuitem">About</a>
+        <a href="how-it-works.html" class="nav-link" role="menuitem">How It Works</a>
+        <a href="get-involved.html" class="nav-link" role="menuitem">Get Involved</a>
+        <a href="contact.html"      class="nav-link" role="menuitem">Contact</a>
+        <a href="#donate-money" class="btn btn-primary">Donate Now</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── Page Header ─────────────────────────────────────── -->
+  <header class="page-header" role="banner">
+    <div class="container">
+      <div class="page-header-inner">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="breadcrumb-sep" aria-hidden="true">/</span>
+          <span>Get Involved</span>
+        </nav>
+        <span class="eyebrow">Two Ways to Help</span>
+        <h1>Make a real, traceable impact.</h1>
+        <p class="lead">
+          Whether you have hardware to donate or money to contribute, your support
+          directly puts a working computer in the hands of a family that needs one.
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── Two Tracks ───────────────────────────────────────── -->
+  <section class="section" aria-labelledby="tracks-heading">
+    <div class="container">
+
+      <div class="section-header fade-up">
+        <span class="eyebrow">Two Ways to Give</span>
+        <h2 id="tracks-heading">Pick your path</h2>
+        <p>Both forms of support are equally valuable — and each one directly maps to a family receiving a computer.</p>
+      </div>
+
+      <div class="tracks">
+
+        <!-- Track 1: Hardware -->
+        <div class="track-card track-card-blue fade-up" aria-labelledby="track1-heading">
+          <div class="track-card-bg-num" aria-hidden="true">1</div>
+          <span class="eyebrow" style="color:rgba(255,255,255,0.55);display:block;margin-bottom:.75rem;">Track 1</span>
+          <h2 id="track1-heading">Donate Hardware</h2>
+          <p>
+            Have old computers sitting in a storage room? We'll handle pickup,
+            wipe the data securely, and put them to work for a family in your
+            community.
+          </p>
+          <ul class="track-list" role="list">
+            <li>Laptops, desktops, or mixed fleets</li>
+            <li>Machines from the past 8–10 years</li>
+            <li>Free pickup for bulk donations</li>
+            <li>Secure data destruction — documented</li>
+            <li>Tax-deductible donation receipt provided</li>
+          </ul>
+          <a href="contact.html" class="btn btn-white btn-lg" aria-label="Fill out hardware donation inquiry form">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            Submit Donation Inquiry
+          </a>
+        </div>
+
+        <!-- Track 2: Money -->
+        <div class="track-card track-card-green fade-up" id="donate-money" aria-labelledby="track2-heading">
+          <div class="track-card-bg-num" aria-hidden="true">2</div>
+          <span class="eyebrow" style="color:rgba(255,255,255,0.55);display:block;margin-bottom:.75rem;">Track 2</span>
+          <h2 id="track2-heading">Donate Money</h2>
+          <p>
+            Hardware is donated — so <strong>$20–40 covers an entire computer build</strong>.
+            Your money goes directly to the parts that make each machine fully
+            functional.
+          </p>
+          <ul class="track-list" role="list">
+            <li>$20–40 covers parts for one full build</li>
+            <li>100% tax-deductible via Hack Club Bank</li>
+            <li>Processed securely through a 501(c)(3)</li>
+            <li>Every dollar directly supports a family</li>
+            <li>Receipts issued automatically</li>
+          </ul>
+          <!-- [PLACEHOLDER: Replace href below with the real Hack Club Bank donation URL] -->
+          <a href="#" class="btn btn-white btn-lg" aria-label="Donate money via Hack Club Bank [PLACEHOLDER URL]">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            Donate Now
+          </a>
+          <p style="font-size:.8125rem;color:rgba(255,255,255,0.55);margin-top:.875rem;margin-bottom:0;">
+            <!-- [PLACEHOLDER: Hack Club Bank donation URL] -->
+            Donation link: <span style="font-weight:600;">[PLACEHOLDER: Hack Club Bank URL]</span>
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Tax info box -->
+      <div class="info-box info-box-blue fade-up" style="max-width:700px;margin:0 auto;">
+        <h3>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:middle;margin-right:.5rem;" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Tax-deductible giving
+        </h3>
+        <p>
+          All monetary donations are processed through <strong>Hack Club Bank</strong>,
+          a registered 501(c)(3) nonprofit (EIN available upon request). Whether you donate
+          hardware or money, you'll receive the documentation you need for tax purposes.
+          Please consult your tax advisor for guidance specific to your situation.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── Why Now ───────────────────────────────────────────── -->
+  <section class="section bg-surface" aria-labelledby="whynow-heading">
+    <div class="container" style="max-width:860px;">
+
+      <div class="section-header fade-up">
+        <span class="eyebrow">Why It Matters</span>
+        <h2 id="whynow-heading">The window is open — help us fill it</h2>
+        <p>
+          We're pre-launch, targeting our first 5–10 builds in Summer 2026.
+          Early support helps us establish the pipeline and prove the model.
+        </p>
+      </div>
+
+      <div class="grid-3">
+        <div class="card fade-up">
+          <div class="card-icon card-icon-blue" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <h3>Immediate impact</h3>
+          <p>Each computer we build and distribute in Summer 2026 goes directly to a referred family. There's no waiting list — demand is already there.</p>
+        </div>
+        <div class="card fade-up">
+          <div class="card-icon card-icon-green" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <h3>Efficient use of funds</h3>
+          <p>Because hardware is donated, almost all monetary support goes directly toward parts — not overhead. $40 = one complete build.</p>
+        </div>
+        <div class="card fade-up">
+          <div class="card-icon card-icon-orange" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h3>Building toward scale</h3>
+          <p>Early donors help us prove the model and document the process — the foundation for a replicable chapter network across the Bay Area.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── FAQ ──────────────────────────────────────────────── -->
+  <section class="section" aria-labelledby="faq-heading">
+    <div class="container" style="max-width:760px;">
+
+      <div class="section-header fade-up">
+        <span class="eyebrow">Common Questions</span>
+        <h2 id="faq-heading">Frequently asked questions</h2>
+      </div>
+
+      <div role="list">
+        <div class="faq-item fade-up" role="listitem">
+          <div class="faq-q">What condition do donated computers need to be in?</div>
+          <p class="faq-a">We accept machines in functional or repairable condition. Cosmetic wear is fine — we care about core components working. If you're unsure, reach out and we'll let you know if the machine is a good fit.</p>
+        </div>
+        <div class="faq-item fade-up" role="listitem">
+          <div class="faq-q">How old can donated machines be?</div>
+          <p class="faq-a">We typically work with machines from the past 8–10 years. Older hardware can struggle with modern software requirements. If you have machines outside this window, feel free to ask — we'll assess on a case-by-case basis.</p>
+        </div>
+        <div class="faq-item fade-up" role="listitem">
+          <div class="faq-q">What happens to our company's data?</div>
+          <p class="faq-a">All drives are securely wiped using a multi-pass process before any software is installed. We can provide documentation of the wipe upon request. Your data security is a priority.</p>
+        </div>
+        <div class="faq-item fade-up" role="listitem">
+          <div class="faq-q">Is my monetary donation really tax-deductible?</div>
+          <p class="faq-a">Yes. SVDE operates under fiscal sponsorship from Hack Club Bank, a registered 501(c)(3) nonprofit. All monetary donations are processed through Hack Club Bank and are tax-deductible to the extent permitted by law.</p>
+        </div>
+        <div class="faq-item fade-up" role="listitem">
+          <div class="faq-q">How do families receive computers?</div>
+          <p class="faq-a">Families are referred through our partnership with Second Harvest of Silicon Valley. Recipients are connected to us through their existing food-bank network — ensuring we reach families who genuinely need the support.</p>
+        </div>
+        <div class="faq-item fade-up" role="listitem">
+          <div class="faq-q">Can our company volunteer or partner with SVDE?</div>
+          <p class="faq-a">Absolutely. We welcome partnerships of all kinds — from hardware donations to technical volunteers who can help with refurbishment. Reach out via our contact form and we'll find a way to work together.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── CTA ──────────────────────────────────────────────── -->
+  <section class="cta-section section" aria-labelledby="gi-cta-heading">
+    <div class="container">
+      <div class="cta-inner">
+        <span class="eyebrow">Ready to Help?</span>
+        <h2 id="gi-cta-heading">Let's put those computers to work.</h2>
+        <p>
+          Fill out a hardware donation inquiry, make a financial contribution,
+          or reach out with any questions.
+        </p>
+        <div class="cta-actions">
+          <a href="contact.html" class="btn btn-white btn-lg">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            Hardware Donation Inquiry
+          </a>
+          <!-- [PLACEHOLDER: Replace # with real Hack Club Bank URL] -->
+          <a href="#" class="btn btn-outline-white btn-lg">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            Donate Money
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ───────────────────────────────────────────── -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo" aria-label="SVDE Home">
+            <div class="nav-logo-mark" aria-hidden="true">SVDE</div>
+            <div class="nav-logo-text">
+              <span class="nav-logo-abbr">SVDE</span>
+              <span class="nav-logo-full">Silicon Valley Digital Equity</span>
+            </div>
+          </a>
+          <p class="footer-tagline">Bridging the digital divide in Silicon Valley, one refurbished computer at a time.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <ul class="footer-links" role="list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="how-it-works.html">How It Works</a></li>
+            <li><a href="get-involved.html">Get Involved</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Get Involved</h4>
+          <ul class="footer-links" role="list">
+            <li><a href="#donate-money">Donate Money</a></li>
+            <li><a href="contact.html">Donate Hardware</a></li>
+            <li><a href="get-involved.html">Partner With Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Organization</h4>
+          <ul class="footer-links" role="list">
+            <li><a href="about.html">Our Story</a></li>
+            <li><a href="about.html#mission">Mission</a></li>
+            <li><a href="about.html#partners">Partners</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 Silicon Valley Digital Equity. All rights reserved.</p>
+        <p class="footer-legal">Fiscal sponsor: Hack Club Bank &mdash; a 501(c)(3) nonprofit. All donations are tax-deductible.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
