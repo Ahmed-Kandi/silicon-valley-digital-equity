@@ -33,11 +33,6 @@
           Donate Now
         </a>
 
-        <button class="nav-theme-toggle" aria-label="Switch to dark mode" title="Toggle dark mode">
-          <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-          <svg class="icon-sun"  width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-        </button>
-
         <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>
@@ -108,26 +103,12 @@
     </div>
   </section>
 
-  <!-- ── Stats Bar ────────────────────────────────────────── -->
-  <section class="stats-bar" aria-label="Impact statistics">
+  <!-- ── Statement Bar ──────────────────────────────────────── -->
+  <section class="statement-bar">
     <div class="container">
-      <div class="stats-bar-inner">
-        <div class="stat-item fade-up">
-          <div class="stat-value">$<span class="accent">20</span>&ndash;40</div>
-          <div class="stat-label">Parts cost per build</div>
-        </div>
-        <div class="stat-item fade-up">
-          <div class="stat-value"><span class="accent">1</span> : 1</div>
-          <div class="stat-label">Donation = 1 family served</div>
-        </div>
-        <div class="stat-item fade-up">
-          <div class="stat-value"><span class="accent">0</span></div>
-          <div class="stat-label">Cost to recipient families</div>
-        </div>
-        <div class="stat-item fade-up">
-          <div class="stat-value"><span class="accent">100%</span></div>
-          <div class="stat-label">Tax-deductible donations</div>
-        </div>
+      <div class="statement-inner">
+        <p class="statement-headline">One donated computer. One family connected.</p>
+        <p class="statement-sub">Parts cost $20–40 per build. Hardware is donated. Recipients pay nothing.</p>
       </div>
     </div>
   </section>
@@ -137,7 +118,6 @@
     <div class="container">
 
       <div class="section-header fade-up">
-        <span class="eyebrow">How It Works</span>
         <h2 id="hiw-heading">From retired hardware to a family's first computer</h2>
         <p>
           A three-step pipeline that turns e-waste into opportunity, at almost no cost
@@ -145,50 +125,22 @@
         </p>
       </div>
 
-      <div class="grid-3">
-
-        <div class="card fade-up">
-          <div class="card-icon card-icon-blue" aria-hidden="true">
-            <!-- Building icon -->
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
-          </div>
-          <div class="step-tag">Step 1</div>
+      <div class="hiw-steps">
+        <div class="hiw-step">
+          <span class="hiw-num">01</span>
           <h3>Source</h3>
-          <p>
-            We collect retired computers from local businesses, accounting firms,
-            law offices, real estate agencies, who would otherwise pay to
-            e-waste them.
-          </p>
+          <p>We collect retired computers from local businesses, accounting firms, law offices, real estate agencies, who would otherwise pay to e-waste them.</p>
         </div>
-
-        <div class="card fade-up">
-          <div class="card-icon card-icon-orange" aria-hidden="true">
-            <!-- Tool icon -->
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
-          </div>
-          <div class="step-tag">Step 2</div>
+        <div class="hiw-step">
+          <span class="hiw-num">02</span>
           <h3>Refurbish</h3>
-          <p>
-            We wipe drives, repair hardware, and install free open-source software.
-            Total parts cost: roughly <strong>$20–40 per machine</strong>.
-            The hardware itself is donated.
-          </p>
+          <p>We wipe drives, repair hardware, and install free open-source software. Total parts cost roughly <strong>$20–40 per machine</strong>. The hardware itself is donated.</p>
         </div>
-
-        <div class="card fade-up">
-          <div class="card-icon card-icon-green" aria-hidden="true">
-            <!-- Heart + home icon -->
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-          </div>
-          <div class="step-tag">Step 3</div>
+        <div class="hiw-step">
+          <span class="hiw-num">03</span>
           <h3>Distribute</h3>
-          <p>
-            Families will be referred through our planned partnership with
-            <strong>Second Harvest of Silicon Valley</strong> and receive a
-            fully functional computer, completely free.
-          </p>
+          <p>Families will be referred through our planned partnership with Second Harvest of Silicon Valley and receive a fully functional computer, completely free.</p>
         </div>
-
       </div>
 
       <div class="text-center mt-4">
@@ -219,7 +171,6 @@
       <div class="impact-grid">
 
         <div class="impact-content fade-up">
-          <span class="eyebrow" style="display:block;margin-bottom:.75rem;">Why It Matters</span>
           <h2 id="impact-heading">The Silicon Valley paradox</h2>
           <p class="lead">
             We live in the world's wealthiest tech hub, home to Apple, Google, and
@@ -227,43 +178,10 @@
             Cupertino can't afford a basic computer for their children's education.
           </p>
 
-          <div class="impact-items">
-            <div class="impact-item">
-              <div class="impact-item-icon" aria-hidden="true">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-              </div>
-              <div class="impact-item-text">
-                <strong>Direct, traceable impact</strong>
-                <span>One hardware donation = one family receives a working computer.</span>
-              </div>
-            </div>
-            <div class="impact-item">
-              <div class="impact-item-icon" aria-hidden="true">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-              </div>
-              <div class="impact-item-text">
-                <strong>Keeps hardware out of landfills</strong>
-                <span>We extend the life of machines businesses would otherwise discard.</span>
-              </div>
-            </div>
-            <div class="impact-item">
-              <div class="impact-item-icon" aria-hidden="true">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-              </div>
-              <div class="impact-item-text">
-                <strong>Student-led, professionally run</strong>
-                <span>Real community partners, verified fiscal sponsorship, and a documented process.</span>
-              </div>
-            </div>
-            <div class="impact-item">
-              <div class="impact-item-icon" aria-hidden="true">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-              </div>
-              <div class="impact-item-text">
-                <strong>Built to scale</strong>
-                <span>A replicable chapter model so other students can start SVDE chapters across the Bay Area.</span>
-              </div>
-            </div>
+          <div class="impact-prose">
+            <p>We live in the world's wealthiest technology corridor. Apple, Google, and thousands of startups call Silicon Valley home. Yet families a few miles from these campuses can't afford the hardware their children need to participate in modern education.</p>
+            <p>Every computer we distribute goes directly to a family identified through our community network. One business donation translates into one family gaining access. The impact is direct and traceable.</p>
+            <p>We're building this as a replicable model. A documented playbook means other students across the Bay Area can launch their own SVDE chapter, multiplying the impact without starting from scratch.</p>
           </div>
         </div>
 
@@ -290,7 +208,6 @@
   <section class="cta-section section" aria-labelledby="cta-heading">
     <div class="container">
       <div class="cta-inner">
-        <span class="eyebrow">Take Action</span>
         <h2 id="cta-heading">Ready to close the digital divide?</h2>
         <p>
           Whether you have old computers collecting dust or want to support our work
@@ -345,16 +262,6 @@
           <ul class="footer-links" role="list">
             <li><a href="get-involved#donate-money">Donate Money</a></li>
             <li><a href="contact">Donate Hardware</a></li>
-            <li><a href="get-involved">Partner With Us</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>Organization</h4>
-          <ul class="footer-links" role="list">
-            <li><a href="about">Our Story</a></li>
-            <li><a href="about#mission">Mission</a></li>
-            <li><a href="about#partners">Partners</a></li>
           </ul>
         </div>
 
