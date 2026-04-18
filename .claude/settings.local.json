@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cat .github/workflows/*.yml)",
+      "Bash(ls .github/)",
+      "Bash(gh api *)",
+      "Bash(grep -E '\\\\.\\(png|svg|jpg|jpeg|gif\\)$')"
+    ]
+  }
+}
