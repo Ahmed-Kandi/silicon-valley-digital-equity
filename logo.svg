@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+  <!-- Background -->
+  <rect width="500" height="500" fill="#134E4A"/>
+
+  <!-- Suspension / stay cables (light gray) -->
+  <!-- Outer cables: tower tops to deck ends -->
+  <line x1="191" y1="147" x2="76" y2="293" stroke="rgba(255,255,255,0.45)" stroke-width="6" stroke-linecap="round"/>
+  <line x1="309" y1="147" x2="424" y2="293" stroke="rgba(255,255,255,0.45)" stroke-width="6" stroke-linecap="round"/>
+  <!-- Inner cables: tower tops toward center of deck -->
+  <line x1="191" y1="147" x2="143" y2="293" stroke="rgba(255,255,255,0.3)" stroke-width="4" stroke-linecap="round"/>
+  <line x1="309" y1="147" x2="357" y2="293" stroke="rgba(255,255,255,0.3)" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Orange arch -->
+  <path d="M 76 293 Q 250 188 424 293" fill="none" stroke="#EA580C" stroke-width="20" stroke-linecap="round"/>
+
+  <!-- Deck beam -->
+  <rect x="76" y="289" width="348" height="14" rx="3" fill="white"/>
+
+  <!-- Left tower pillar -->
+  <rect x="181" y="143" width="20" height="160" rx="2" fill="white"/>
+  <!-- Left tower crossbars -->
+  <rect x="161" y="178" width="60" height="11" rx="2" fill="white"/>
+  <rect x="161" y="210" width="60" height="11" rx="2" fill="white"/>
+
+  <!-- Right tower pillar -->
+  <rect x="299" y="143" width="20" height="160" rx="2" fill="white"/>
+  <!-- Right tower crossbars -->
+  <rect x="279" y="178" width="60" height="11" rx="2" fill="white"/>
+  <rect x="279" y="210" width="60" height="11" rx="2" fill="white"/>
+
+  <!-- SVDE wordmark -->
+  <text x="250" y="428" text-anchor="middle"
+        font-family="Arial Black, 'Arial Bold', Arial, Helvetica, sans-serif"
+        font-weight="900" font-size="76" fill="white" letter-spacing="8">SVDE</text>
+</svg>

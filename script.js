@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
       let valid = true;
       form.querySelectorAll('[required]').forEach(f => {
@@ -101,12 +101,35 @@ document.addEventListener('DOMContentLoaded', () => {
         form.querySelector('.error')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
         return;
       }
-      // Show success state
-      form.style.display = 'none';
-      const success = document.getElementById('formSuccess');
-      if (success) {
-        success.classList.add('visible');
-        success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+      const submitBtn = form.querySelector('[type="submit"]');
+      const originalHTML = submitBtn.innerHTML;
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending\u2026';
+
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+          form.style.display = 'none';
+          const success = document.getElementById('formSuccess');
+          if (success) {
+            success.classList.add('visible');
+            success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+        } else {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalHTML;
+          alert('Something went wrong. Please email us at contact@svdigitalequity.org');
+        }
+      } catch (_) {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalHTML;
+        alert('Something went wrong. Please email us at contact@svdigitalequity.org');
       }
     });
   }

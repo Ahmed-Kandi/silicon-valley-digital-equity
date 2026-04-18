@@ -211,14 +211,15 @@ p  { line-height: 1.7; color: var(--ink-light); }
 
 .nav-logo-mark {
   width: 36px; height: 36px;
-  background: #134E4A;
   border-radius: 8px;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 0.625rem; font-weight: 900;
-  color: white; letter-spacing: -0.01em;
+  overflow: hidden;
   flex-shrink: 0;
-  line-height: 1;
-  text-align: center;
+  display: block;
+}
+.nav-logo-mark img {
+  width: 36px; height: 36px;
+  display: block;
+  border-radius: 8px;
 }
 
 .nav-logo-text    { display: flex; flex-direction: column; line-height: 1.1; }

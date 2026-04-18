@@ -6,6 +6,7 @@
   <title>Get Involved, Silicon Valley Digital Equity</title>
   <meta name="description" content="Support SVDE by donating old computers from your business or making a tax-deductible financial contribution through Hack Club Bank." />
   <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/svg+xml" href="logo.svg" />
   <style>
     /* Get Involved specific overrides */
     .tracks { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 3rem; }
@@ -38,7 +39,7 @@
     <div class="container">
       <div class="nav-inner">
         <a href="/" class="nav-logo" aria-label="SVDE Home">
-          <div class="nav-logo-mark" aria-hidden="true">SVDE</div>
+          <div class="nav-logo-mark" aria-hidden="true"><img src="logo.svg" width="36" height="36" alt=""></div>
           <div class="nav-logo-text">
             <span class="nav-logo-abbr">SVDE</span>
             <span class="nav-logo-full">Silicon Valley Digital Equity</span>
@@ -51,7 +52,7 @@
           <li><a href="get-involved" class="nav-link">Get Involved</a></li>
           <li><a href="contact"      class="nav-link">Contact</a></li>
         </ul>
-        <a href="#donate-money" class="btn btn-primary nav-cta">Donate Now</a>
+        <a href="https://hcb.hackclub.com/donations/start/silicon-valley-digital-equity" target="_blank" rel="noopener" class="btn btn-primary nav-cta">Donate Now</a>
 
         <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
           <span></span><span></span><span></span>
@@ -63,7 +64,7 @@
         <a href="how-it-works" class="nav-link" role="menuitem">How It Works</a>
         <a href="get-involved" class="nav-link" role="menuitem">Get Involved</a>
         <a href="contact"      class="nav-link" role="menuitem">Contact</a>
-        <a href="#donate-money" class="btn btn-primary">Donate Now</a>
+        <a href="https://hcb.hackclub.com/donations/start/silicon-valley-digital-equity" target="_blank" rel="noopener" class="btn btn-primary">Donate Now</a>
       </div>
     </div>
   </nav>
@@ -113,7 +114,7 @@
             <li>Secure data destruction, documented</li>
             <li>Tax-deductible donation receipt provided</li>
           </ul>
-          <a href="contact" class="btn btn-white btn-lg" aria-label="Fill out hardware donation inquiry form">
+          <a href="#donate-hardware-form" class="btn btn-white btn-lg" aria-label="Fill out hardware donation inquiry form">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
             Submit Donation Inquiry
           </a>
@@ -130,20 +131,15 @@
           </p>
           <ul class="track-list" role="list">
             <li>$20–40 covers parts for one full build</li>
-            <li>Tax-deductible via Hack Club Bank (pending approval)</li>
-            <li>Processed through a 501(c)(3) once sponsorship confirmed</li>
+            <li>Tax-deductible via Hack Club Bank</li>
+            <li>Processed through a registered 501(c)(3)</li>
             <li>Every dollar directly supports a family</li>
             <li>Receipts issued automatically</li>
           </ul>
-          <!-- [PLACEHOLDER: Replace href below with the real Hack Club Bank donation URL] -->
-          <a href="#" class="btn btn-white btn-lg" aria-label="Donate money via Hack Club Bank [PLACEHOLDER URL]">
+          <a href="https://hcb.hackclub.com/donations/start/silicon-valley-digital-equity" target="_blank" rel="noopener" class="btn btn-white btn-lg" aria-label="Donate money via Hack Club Bank">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
             Donate Now
           </a>
-          <p style="font-size:.8125rem;color:rgba(255,255,255,0.55);margin-top:.875rem;margin-bottom:0;">
-            <!-- [PLACEHOLDER: Hack Club Bank donation URL] -->
-            Donation link: <span style="font-weight:600;">[PLACEHOLDER: Hack Club Bank URL]</span>
-          </p>
         </div>
 
       </div>
@@ -155,8 +151,8 @@
           Tax-deductible giving
         </h3>
         <p>
-          We are pursuing fiscal sponsorship through <strong>Hack Club Bank</strong>,
-          a registered 501(c)(3) nonprofit. Once approved, all monetary donations will be
+          SVDE operates under fiscal sponsorship through <strong>Hack Club Bank</strong>,
+          a registered 501(c)(3) nonprofit. All monetary donations are
           tax-deductible and you will receive proper documentation. Please consult your
           tax advisor for guidance specific to your situation.
         </p>
@@ -165,8 +161,163 @@
     </div>
   </section>
 
+  <!-- ── Hardware Donation Form ──────────────────────────── -->
+  <section class="section bg-surface" id="donate-hardware-form" aria-labelledby="hw-form-heading">
+    <div class="container" style="max-width:760px;">
+
+      <div class="section-header fade-up">
+        <h2 id="hw-form-heading">Donate Hardware</h2>
+        <p>Fill out the form below and we'll be in touch within 2 business days to coordinate pickup and provide donation documentation.</p>
+      </div>
+
+      <!-- Success message (hidden until form submits) -->
+      <div id="formSuccess" class="form-success" role="alert" aria-live="polite">
+        <div class="form-success-icon" aria-hidden="true">&#10003;</div>
+        <h3>Thank you!</h3>
+        <p>We'll be in touch within 2 business days.</p>
+      </div>
+
+      <form
+        id="hardwareForm"
+        class="form-card fade-up"
+        action="https://formspree.io/f/xbdqoqdy"
+        method="POST"
+        novalidate
+        aria-labelledby="hw-form-heading"
+      >
+
+        <!-- Row: Full name + Company name -->
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fullName">Full name <span aria-hidden="true" style="color:#dc2626;">*</span></label>
+            <input
+              type="text"
+              id="fullName"
+              name="fullName"
+              autocomplete="name"
+              placeholder="Jane Smith"
+              required
+              aria-required="true"
+              aria-describedby="fullName-error"
+            />
+            <span id="fullName-error" class="field-error" role="alert"></span>
+          </div>
+          <div class="form-group">
+            <label for="companyName">Company name <span aria-hidden="true" style="color:#dc2626;">*</span></label>
+            <input
+              type="text"
+              id="companyName"
+              name="companyName"
+              autocomplete="organization"
+              placeholder="Acme Accounting LLC"
+              required
+              aria-required="true"
+              aria-describedby="companyName-error"
+            />
+            <span id="companyName-error" class="field-error" role="alert"></span>
+          </div>
+        </div>
+
+        <!-- Row: Number of machines + Machine type -->
+        <div class="form-row">
+          <div class="form-group">
+            <label for="numMachines">Number of machines available <span aria-hidden="true" style="color:#dc2626;">*</span></label>
+            <input
+              type="number"
+              id="numMachines"
+              name="numMachines"
+              min="1"
+              placeholder="e.g. 5"
+              required
+              aria-required="true"
+              aria-describedby="numMachines-error"
+            />
+            <span id="numMachines-error" class="field-error" role="alert"></span>
+          </div>
+          <div class="form-group">
+            <label for="machineType">Machine type <span aria-hidden="true" style="color:#dc2626;">*</span></label>
+            <select
+              id="machineType"
+              name="machineType"
+              required
+              aria-required="true"
+              aria-describedby="machineType-error"
+            >
+              <option value="" disabled selected>Select type&hellip;</option>
+              <option value="Laptop">Laptop</option>
+              <option value="Desktop">Desktop</option>
+              <option value="Mixed">Mixed</option>
+            </select>
+            <span id="machineType-error" class="field-error" role="alert"></span>
+          </div>
+        </div>
+
+        <!-- Contact email -->
+        <div class="form-group">
+          <label for="email">Contact email <span aria-hidden="true" style="color:#dc2626;">*</span></label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            autocomplete="email"
+            placeholder="jane@acme.com"
+            required
+            aria-required="true"
+            aria-describedby="email-error"
+          />
+          <span id="email-error" class="field-error" role="alert"></span>
+        </div>
+
+        <!-- Phone (optional) -->
+        <div class="form-group">
+          <label for="phone">
+            Phone number
+            <span class="optional">(optional)</span>
+          </label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            autocomplete="tel"
+            placeholder="(408) 555-0100"
+            aria-describedby="phone-error"
+          />
+          <span id="phone-error" class="field-error" role="alert"></span>
+        </div>
+
+        <!-- Message (optional) -->
+        <div class="form-group">
+          <label for="message">
+            Message / notes
+            <span class="optional">(optional)</span>
+          </label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Machine models, approximate age, pickup constraints, or anything else we should know…"
+            aria-describedby="message-hint"
+          ></textarea>
+          <span id="message-hint" class="field-error" role="alert"></span>
+        </div>
+
+        <!-- Submit -->
+        <button type="submit" class="btn btn-primary btn-lg" style="width:100%;justify-content:center;margin-top:.5rem;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          Submit Donation Inquiry
+        </button>
+
+        <p class="form-note">
+          Fields marked <span aria-hidden="true" style="color:#dc2626;font-weight:700;">*</span>
+          <span class="sr-only">with an asterisk</span> are required.
+          We'll follow up within 2 business days.
+        </p>
+
+      </form>
+    </div>
+  </section>
+
   <!-- ── Why Now ───────────────────────────────────────────── -->
-  <section class="section bg-surface" aria-labelledby="whynow-heading">
+  <section class="section" aria-labelledby="whynow-heading">
     <div class="container" style="max-width:860px;">
 
       <div class="section-header fade-up">
@@ -205,7 +356,7 @@
   </section>
 
   <!-- ── FAQ ──────────────────────────────────────────────── -->
-  <section class="section" aria-labelledby="faq-heading">
+  <section class="section bg-surface" aria-labelledby="faq-heading">
     <div class="container" style="max-width:760px;">
 
       <div class="section-header fade-up">
@@ -227,11 +378,11 @@
         </div>
         <div class="faq-item fade-up" role="listitem">
           <div class="faq-q">Is my monetary donation really tax-deductible?</div>
-          <p class="faq-a">We are pursuing fiscal sponsorship through Hack Club Bank, a registered 501(c)(3) nonprofit. Once that approval is confirmed, all monetary donations will be tax-deductible. We will update this page when the sponsorship is active.</p>
+          <p class="faq-a">Yes. SVDE operates under fiscal sponsorship through Hack Club Bank, a registered 501(c)(3) nonprofit. All monetary donations are tax-deductible.</p>
         </div>
         <div class="faq-item fade-up" role="listitem">
           <div class="faq-q">How do families receive computers?</div>
-          <p class="faq-a">We are pursuing a partnership with Second Harvest of Silicon Valley to refer families through their existing network. This partnership is pending confirmation.</p>
+          <p class="faq-a">We work with Second Harvest of Silicon Valley to refer families through their existing trusted network, reaching households who genuinely need support in San Jose and Cupertino.</p>
         </div>
         <div class="faq-item fade-up" role="listitem">
           <div class="faq-q">Can our company volunteer or partner with SVDE?</div>
@@ -252,12 +403,11 @@
           or reach out with any questions.
         </p>
         <div class="cta-actions">
-          <a href="contact" class="btn btn-white btn-lg">
+          <a href="#donate-hardware-form" class="btn btn-white btn-lg">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
             Hardware Donation Inquiry
           </a>
-          <!-- [PLACEHOLDER: Replace # with real Hack Club Bank URL] -->
-          <a href="#" class="btn btn-outline-white btn-lg">
+          <a href="https://hcb.hackclub.com/donations/start/silicon-valley-digital-equity" target="_blank" rel="noopener" class="btn btn-outline-white btn-lg">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
             Donate Money
           </a>
@@ -272,7 +422,7 @@
       <div class="footer-inner">
         <div class="footer-brand">
           <a href="/" class="nav-logo" aria-label="SVDE Home">
-            <div class="nav-logo-mark" aria-hidden="true">SVDE</div>
+            <div class="nav-logo-mark" aria-hidden="true"><img src="logo.svg" width="36" height="36" alt=""></div>
             <div class="nav-logo-text">
               <span class="nav-logo-abbr">SVDE</span>
               <span class="nav-logo-full">Silicon Valley Digital Equity</span>
@@ -293,14 +443,14 @@
         <div class="footer-col">
           <h4>Get Involved</h4>
           <ul class="footer-links" role="list">
-            <li><a href="#donate-money">Donate Money</a></li>
-            <li><a href="contact">Donate Hardware</a></li>
+            <li><a href="https://hcb.hackclub.com/donations/start/silicon-valley-digital-equity" target="_blank" rel="noopener">Donate Money</a></li>
+            <li><a href="#donate-hardware-form">Donate Hardware</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <p class="footer-copy">&copy; 2026 Silicon Valley Digital Equity. All rights reserved.</p>
-        <p class="footer-legal">Fiscal sponsorship via Hack Club Bank pending approval. Donation tax-deductibility subject to confirmation.</p>
+        <p class="footer-copy">&copy; 2026 Silicon Valley Digital Equity. All rights reserved. &mdash; <a href="mailto:contact@svdigitalequity.org">contact@svdigitalequity.org</a></p>
+        <p class="footer-legal">Fiscal sponsorship via Hack Club Bank, a registered 501(c)(3). Donations are tax-deductible.</p>
       </div>
     </div>
   </footer>
