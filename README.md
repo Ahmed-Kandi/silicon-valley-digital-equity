@@ -6,7 +6,7 @@ Brand name: Silicon Valley Digital Equity
 Abbreviation: SVDE
 URL/code references: svdigitalequity.org
 Type: High school student-led nonprofit
-Fiscal Sponsor: Hack Club Bank (501c3, pending approval)
+Fiscal Sponsor: Hack Club Bank (501c3)
 Location: San Jose / Cupertino, CA (Silicon Valley)
 
 
@@ -25,15 +25,16 @@ lack access to basic computing equipment.
 2. We wipe, repair, and install free open-source software on each machine.
   Parts cost roughly $20-40 per build; the hardware itself is donated.
 
-3. Families referred through our partnership with Second Harvest of Silicon
-  Valley receive a fully functional computer at no cost.
+3. Families referred through trusted local community organizations receive
+  a fully functional computer at no cost.
 
 
 ## CURRENT STATUS
 - Pre-launch; first builds planned for Summer 2026
 - First cohort goal: 5-10 computers
-- Fiscal sponsor: Hack Club Bank (pending approval)
-- Community partner: Second Harvest of Silicon Valley
+- Fiscal sponsor: Hack Club Bank
+- Partner: Fragomen, Del Rey, Bernsen & Loewy, LLP (Silicon Valley), donated
+  laptops that we refurbish and give to families
 - Team: High school student from San Jose / Cupertino area
 
 
