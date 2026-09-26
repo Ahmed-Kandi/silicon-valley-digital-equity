@@ -3,28 +3,7 @@
    Shared JavaScript
    ============================================================ */
 
-// ── Dark Mode (runs before DOMContentLoaded to avoid flash) ──
-
-(function () {
-  const stored = localStorage.getItem('svde-theme');
-  const theme = stored || 'light';
-  if (theme === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
-  else                  document.documentElement.setAttribute('data-theme', 'light');
-})();
-
 document.addEventListener('DOMContentLoaded', () => {
-
-  // ── Dark Mode Toggle ──────────────────────────────────────
-
-  document.querySelectorAll('.nav-theme-toggle').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-      const next   = isDark ? 'light' : 'dark';
-      document.documentElement.setAttribute('data-theme', next);
-      localStorage.setItem('svde-theme', next);
-      btn.setAttribute('aria-label', next === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
-    });
-  });
 
   // ── Navigation ────────────────────────────────────────────
 
@@ -32,50 +11,36 @@ document.addEventListener('DOMContentLoaded', () => {
   const hamburger  = document.querySelector('.nav-hamburger');
   const mobileNav  = document.querySelector('.nav-mobile');
 
-  // Scroll shadow on nav
-  const onScroll = () => {
-    if (nav) nav.classList.toggle('scrolled', window.scrollY > 20);
+  const setMenu = (open) => {
+    hamburger.classList.toggle('open', open);
+    mobileNav.classList.toggle('open', open);
+    hamburger.setAttribute('aria-expanded', String(open));
+    hamburger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
   };
-  window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
 
-  // Hamburger toggle
   if (hamburger && mobileNav) {
     hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('open');
-      mobileNav.classList.toggle('open');
+      setMenu(!mobileNav.classList.contains('open'));
     });
     document.addEventListener('click', (e) => {
-      if (nav && !nav.contains(e.target)) {
-        hamburger.classList.remove('open');
-        mobileNav.classList.remove('open');
-      }
+      if (nav && !nav.contains(e.target)) setMenu(false);
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') setMenu(false);
     });
   }
 
-  // Active link highlight
-  const page = window.location.pathname.split('/').pop() || 'index.html';
+  // Active link highlight. Pages are served at clean URLs ("/about"),
+  // but also handle "/about.html" and "/" for local previews.
+  const normalize = (p) => p.replace(/\/+$/, '').replace(/\.html$/, '').replace(/^\/?index$/, '') || '/';
+  const current = normalize(window.location.pathname.split('/').pop() || '/');
   document.querySelectorAll('.nav-link').forEach(link => {
-    const href = link.getAttribute('href') || '';
-    if (href === page || (page === '' && href === 'index.html')) {
+    const href = normalize((link.getAttribute('href') || '').split('#')[0]);
+    if (href === current) {
       link.classList.add('active');
+      link.setAttribute('aria-current', 'page');
     }
   });
-
-  // ── Scroll animations ─────────────────────────────────────
-
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('in-view');
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
-  );
-  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
   // ── Hardware Donation Form ─────────────────────────────────
 
@@ -98,14 +63,16 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!validate(f)) valid = false;
       });
       if (!valid) {
-        form.querySelector('.error')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        const firstError = form.querySelector('.error');
+        firstError?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        firstError?.focus({ preventScroll: true });
         return;
       }
 
       const submitBtn = form.querySelector('[type="submit"]');
       const originalHTML = submitBtn.innerHTML;
       submitBtn.disabled = true;
-      submitBtn.textContent = 'Sending\u2026';
+      submitBtn.textContent = 'Sending…';
 
       try {
         const response = await fetch(form.action, {
@@ -152,6 +119,7 @@ function validate(field) {
   }
 
   field.classList.toggle('error', !ok);
+  field.setAttribute('aria-invalid', String(!ok));
   if (errorEl) {
     errorEl.textContent = msg;
     errorEl.classList.toggle('visible', !ok);
