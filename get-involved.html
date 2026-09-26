@@ -3,36 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Get Involved, Silicon Valley Digital Equity</title>
+  <title>Get Involved | Silicon Valley Digital Equity</title>
   <meta name="description" content="Support SVDE by donating old computers from your business or making a tax-deductible financial contribution through Hack Club Bank." />
   <meta property="og:image" content="https://svdigitalequity.org/SVDE.png" />
-  <meta name="twitter:image" content="SVDE.png" />
+  <meta name="twitter:image" content="https://svdigitalequity.org/SVDE.png" />
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" type="image/png" href="SVDE.png" />
-  <style>
-    /* Get Involved specific overrides */
-    .tracks { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 3rem; }
-    @media (max-width: 768px) { .tracks { grid-template-columns: 1fr; } }
-
-    .faq-item {
-      padding: 1.25rem 0;
-      border-bottom: 1px solid var(--border);
-    }
-    .faq-item:last-child { border-bottom: none; }
-    .faq-q {
-      font-weight: 600; font-size: .9375rem; color: var(--ink);
-      margin-bottom: .5rem; display: flex; align-items: flex-start; gap: .625rem;
-    }
-    .faq-q::before {
-      content: 'Q';
-      display: inline-flex; align-items: center; justify-content: center;
-      width: 22px; height: 22px; border-radius: 50%;
-      background: var(--blue-pale); color: var(--blue-bright);
-      font-size: .75rem; font-weight: 800;
-      flex-shrink: 0; margin-top: .05rem;
-    }
-    .faq-a { font-size: .9375rem; color: var(--ink-light); padding-left: 2rem; line-height: 1.75; }
-  </style>
 </head>
 <body>
 
@@ -93,7 +69,7 @@
   <section class="section" aria-labelledby="tracks-heading">
     <div class="container">
 
-      <div class="section-header fade-up">
+      <div class="section-header">
         <h2 id="tracks-heading">Pick your path</h2>
         <p>Both forms of support are equally valuable, and each one directly maps to a family receiving a computer.</p>
       </div>
@@ -101,8 +77,7 @@
       <div class="tracks">
 
         <!-- Track 1: Hardware -->
-        <div class="track-card track-card-blue fade-up" aria-labelledby="track1-heading">
-          <div class="track-card-bg-num" aria-hidden="true">1</div>
+        <div class="track-card track-card-blue" aria-labelledby="track1-heading">
           <h2 id="track1-heading">Donate Hardware</h2>
           <p>
             Have old computers sitting in a storage room? We'll handle pickup,
@@ -123,8 +98,7 @@
         </div>
 
         <!-- Track 2: Money -->
-        <div class="track-card track-card-green fade-up" id="donate-money" aria-labelledby="track2-heading">
-          <div class="track-card-bg-num" aria-hidden="true">2</div>
+        <div class="track-card track-card-green" id="donate-money" aria-labelledby="track2-heading">
           <h2 id="track2-heading">Donate Money</h2>
           <p>
             Hardware is donated, so <strong>$20–40 covers an entire computer build</strong>.
@@ -147,9 +121,9 @@
       </div>
 
       <!-- Tax info box -->
-      <div class="info-box info-box-blue fade-up" style="max-width:700px;margin:0 auto;">
+      <div class="info-box info-box-blue info-box-narrow">
         <h3>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:middle;margin-right:.5rem;" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
           Tax-deductible giving
         </h3>
         <p>
@@ -165,23 +139,22 @@
 
   <!-- ── Hardware Donation Form ──────────────────────────── -->
   <section class="section bg-surface" id="donate-hardware-form" aria-labelledby="hw-form-heading">
-    <div class="container" style="max-width:760px;">
+    <div class="container container-form">
 
-      <div class="section-header fade-up">
+      <div class="section-header">
         <h2 id="hw-form-heading">Donate Hardware</h2>
         <p>Fill out the form below and we'll be in touch within 2 business days to coordinate pickup and provide donation documentation.</p>
       </div>
 
       <!-- Success message (hidden until form submits) -->
       <div id="formSuccess" class="form-success" role="alert" aria-live="polite">
-        <div class="form-success-icon" aria-hidden="true">&#10003;</div>
-        <h3>Thank you!</h3>
+                <h3>Thank you!</h3>
         <p>We'll be in touch within 2 business days.</p>
       </div>
 
       <form
         id="hardwareForm"
-        class="form-card fade-up"
+        class="form-card"
         action="https://formspree.io/f/xbdqoqdy"
         method="POST"
         novalidate
@@ -191,7 +164,7 @@
         <!-- Row: Full name + Company name -->
         <div class="form-row">
           <div class="form-group">
-            <label for="fullName">Full name <span aria-hidden="true" style="color:#dc2626;">*</span></label>
+            <label for="fullName">Full name <span class="req" aria-hidden="true">*</span></label>
             <input
               type="text"
               id="fullName"
@@ -205,7 +178,7 @@
             <span id="fullName-error" class="field-error" role="alert"></span>
           </div>
           <div class="form-group">
-            <label for="companyName">Company name <span aria-hidden="true" style="color:#dc2626;">*</span></label>
+            <label for="companyName">Company name <span class="req" aria-hidden="true">*</span></label>
             <input
               type="text"
               id="companyName"
@@ -223,7 +196,7 @@
         <!-- Row: Number of machines + Machine type -->
         <div class="form-row">
           <div class="form-group">
-            <label for="numMachines">Number of machines available <span aria-hidden="true" style="color:#dc2626;">*</span></label>
+            <label for="numMachines">Number of machines available <span class="req" aria-hidden="true">*</span></label>
             <input
               type="number"
               id="numMachines"
@@ -237,7 +210,7 @@
             <span id="numMachines-error" class="field-error" role="alert"></span>
           </div>
           <div class="form-group">
-            <label for="machineType">Machine type <span aria-hidden="true" style="color:#dc2626;">*</span></label>
+            <label for="machineType">Machine type <span class="req" aria-hidden="true">*</span></label>
             <select
               id="machineType"
               name="machineType"
@@ -256,7 +229,7 @@
 
         <!-- Contact email -->
         <div class="form-group">
-          <label for="email">Contact email <span aria-hidden="true" style="color:#dc2626;">*</span></label>
+          <label for="email">Contact email <span class="req" aria-hidden="true">*</span></label>
           <input
             type="email"
             id="email"
@@ -303,13 +276,13 @@
         </div>
 
         <!-- Submit -->
-        <button type="submit" class="btn btn-primary btn-lg" style="width:100%;justify-content:center;margin-top:.5rem;">
+        <button type="submit" class="btn btn-primary btn-lg btn-block">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
           Submit Donation Inquiry
         </button>
 
         <p class="form-note">
-          Fields marked <span aria-hidden="true" style="color:#dc2626;font-weight:700;">*</span>
+          Fields marked <span class="req" aria-hidden="true">*</span>
           <span class="sr-only">with an asterisk</span> are required.
           We'll follow up within 2 business days.
         </p>
@@ -320,10 +293,10 @@
 
   <!-- ── Why Now ───────────────────────────────────────────── -->
   <section class="section" aria-labelledby="whynow-heading">
-    <div class="container" style="max-width:860px;">
+    <div class="container container-narrow">
 
-      <div class="section-header fade-up">
-        <h2 id="whynow-heading">The window is open, help us fill it</h2>
+      <div class="section-header">
+        <h2 id="whynow-heading">The window is open. Help us fill it.</h2>
         <p>
           We're pre-launch, targeting our first 5–10 builds in Summer 2026.
           Early support helps us establish the pipeline and prove the model.
@@ -331,26 +304,26 @@
       </div>
 
       <div class="grid-3">
-        <div class="card fade-up">
+        <div class="card">
           <div class="card-icon card-icon-blue" aria-hidden="true">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
           </div>
           <h3>Immediate impact</h3>
-          <p>Each computer we build and distribute in Summer 2026 goes directly to a referred family. There's no waiting list, demand is already there.</p>
+          <p>Each computer we build and distribute in Summer 2026 goes directly to a referred family. The demand is already there.</p>
         </div>
-        <div class="card fade-up">
+        <div class="card">
           <div class="card-icon card-icon-green" aria-hidden="true">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
           </div>
           <h3>Efficient use of funds</h3>
           <p>Because hardware is donated, almost all monetary support goes directly toward parts, not overhead. $40 = one complete build.</p>
         </div>
-        <div class="card fade-up">
+        <div class="card">
           <div class="card-icon card-icon-orange" aria-hidden="true">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
           </div>
           <h3>Building toward scale</h3>
-          <p>Early donors help us prove the model and document the process, the foundation for a replicable chapter network across the Bay Area.</p>
+          <p>Early donors help us prove the model and document the process, laying the foundation for a replicable chapter network across the Bay Area.</p>
         </div>
       </div>
 
@@ -359,34 +332,34 @@
 
   <!-- ── FAQ ──────────────────────────────────────────────── -->
   <section class="section bg-surface" aria-labelledby="faq-heading">
-    <div class="container" style="max-width:760px;">
+    <div class="container container-form">
 
-      <div class="section-header fade-up">
+      <div class="section-header">
         <h2 id="faq-heading">Frequently asked questions</h2>
       </div>
 
       <div role="list">
-        <div class="faq-item fade-up" role="listitem">
+        <div class="faq-item" role="listitem">
           <div class="faq-q">What condition do donated computers need to be in?</div>
-          <p class="faq-a">We accept machines in functional or repairable condition. Cosmetic wear is fine, we care about core components working. If you're unsure, reach out and we'll let you know if the machine is a good fit.</p>
+          <p class="faq-a">We accept machines in functional or repairable condition. Cosmetic wear is fine; we care about core components working. If you're unsure, reach out and we'll let you know if the machine is a good fit.</p>
         </div>
-        <div class="faq-item fade-up" role="listitem">
+        <div class="faq-item" role="listitem">
           <div class="faq-q">How old can donated machines be?</div>
-          <p class="faq-a">We typically work with machines from the past 8–10 years. Older hardware can struggle with modern software requirements. If you have machines outside this window, feel free to ask, we'll assess on a case-by-case basis.</p>
+          <p class="faq-a">We typically work with machines from the past 8–10 years. Older hardware can struggle with modern software requirements. If you have machines outside this window, feel free to ask and we'll assess on a case-by-case basis.</p>
         </div>
-        <div class="faq-item fade-up" role="listitem">
+        <div class="faq-item" role="listitem">
           <div class="faq-q">What happens to our company's data?</div>
           <p class="faq-a">All drives are securely wiped using a multi-pass process before any software is installed. We can provide documentation of the wipe upon request. Your data security is a priority.</p>
         </div>
-        <div class="faq-item fade-up" role="listitem">
+        <div class="faq-item" role="listitem">
           <div class="faq-q">Is my monetary donation really tax-deductible?</div>
           <p class="faq-a">Yes. SVDE operates under fiscal sponsorship through Hack Club Bank, a registered 501(c)(3) nonprofit. All monetary donations are tax-deductible.</p>
         </div>
-        <div class="faq-item fade-up" role="listitem">
+        <div class="faq-item" role="listitem">
           <div class="faq-q">How do families receive computers?</div>
           <p class="faq-a">Families will be referred to us through trusted local community organizations, so we reach households who genuinely need support in San Jose and Cupertino.</p>
         </div>
-        <div class="faq-item fade-up" role="listitem">
+        <div class="faq-item" role="listitem">
           <div class="faq-q">Can our company volunteer or partner with SVDE?</div>
           <p class="faq-a">Absolutely. We welcome partnerships of all kinds, from hardware donations to technical volunteers who can help with refurbishment. Reach out via our contact form and we'll find a way to work together.</p>
         </div>
@@ -451,7 +424,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p class="footer-copy">&copy; 2026 Silicon Valley Digital Equity. All rights reserved. &mdash; <a href="mailto:contact@svdigitalequity.org">contact@svdigitalequity.org</a></p>
+        <p class="footer-copy">&copy; 2026 Silicon Valley Digital Equity. All rights reserved. &middot; <a href="mailto:contact@svdigitalequity.org">contact@svdigitalequity.org</a></p>
         <p class="footer-legal">Fiscal sponsorship via Hack Club Bank, a registered 501(c)(3). Donations are tax-deductible.</p>
       </div>
     </div>
